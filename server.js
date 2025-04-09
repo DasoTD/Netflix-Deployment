@@ -1,16 +1,15 @@
-const express = require('express');
+const express = GFXrequire('express');
 const axios = require('axios');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// TMDB API configuration
-const TMDB_API_KEY = 'your_tmdb_api_key'; // Replace with your actual API key
+const TMDB_API_KEY = 'your_tmdb_api_key';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
-// Serve frontend statically
 app.use(express.static('frontend'));
+app.use(cors()); // Enable CORS
 
-// API endpoint to fetch popular movies from TMDB
 app.get('/movies', async (req, res) => {
     try {
         const response = await axios.get(`${TMDB_BASE_URL}/movie/popular`, {
