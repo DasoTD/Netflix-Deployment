@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_REGION = 'us-east-1' // Change to your region
-        ECR_REPO = 'netflix-clone'
+        ECR_REPO = 'Netflix-Deployment'
         AWS_ACCOUNT_ID = 'YOUR_AWS_ACCOUNT_ID'
         ECS_CLUSTER = 'netflix-cluster'
         ECS_SERVICE = 'netflix-service'
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/netflix-clone.git'
+                git branch: 'main', url: 'git@github.com:DasoTD/Netflix-Deployment.git'
             }
         }
         stage('Build Docker Image') {
