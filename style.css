@@ -1,0 +1,5 @@
+/* styles.css */
+body { font-family: Arial, sans-serif; background: #141414; color: white; }
+.header { font-size: 2em; padding: 20px; background: #000; }
+.movie-list { display: flex; flex-wrap: wrap; padding: 20px; }
+.movie { margin: 10px; text-align: center; }
