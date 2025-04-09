@@ -11,7 +11,3 @@ fetch('http://localhost:3000/movies')
         });
     });
     
-
-
-    docker build -t netflix-clone .
-docker run -p 3000:3000 netflix-clone
